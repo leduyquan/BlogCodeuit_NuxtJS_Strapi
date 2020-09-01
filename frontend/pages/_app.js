@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import withData from '../utils/apollo';
-import Nav from "../components/nav";
+import Nav from '../components/nav';
 import { ApolloProvider } from '@apollo/react-hooks';
 import '../assets/css/style.css';
 
