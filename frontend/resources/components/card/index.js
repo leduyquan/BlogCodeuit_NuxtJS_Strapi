@@ -8,7 +8,7 @@ const Card = ({ post }) => {
             : process.env.API_URL + post.banner.url;
     return (
         <Link
-            href={{ pathname: 'childen/post', query: { id: post.id } }}
+            href={{ pathname: 'children/post', query: { id: post.id } }}
             as={'/post/' + post.path}>
             <a className="uk-link-reset">
                 <div className="uk-card uk-card-muted">
