@@ -1,18 +1,18 @@
 import { useRouter } from "next/router";
-import Query from "../components/query";
+import Render from '../../resources/components/render'
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
-import ARTICLE_QUERY from "../apollo/queries/article/article";
+import POST_QUERY from '../../resources/graphql/post/post'
 
-const Article = () => {
+const Post = () => {
   const router = useRouter();
   return (
-    <Query query={ARTICLE_QUERY} id={router.query.id}>
-      {({ data: { article } }) => {
+    <Render query={POST_QUERY} id={router.query.id}>
+      {({ data: { post } }) => {
         const imageUrl =
           process.env.NODE_ENV !== "development"
-            ? article.image.url
-            : process.env.API_URL + article.image.url;
+            ? post.image.url
+            : process.env.API_URL + post.image.url;
         return (
           <div>
             <div
@@ -22,22 +22,23 @@ const Article = () => {
               data-srcset={imageUrl}
               data-uk-img
             >
-              <h1>{article.title}</h1>
+              <h1>{post.title}</h1>
             </div>
 
             <div className="uk-section">
               <div className="uk-container uk-container-small">
-                <ReactMarkdown source={article.content} />
+                <ReactMarkdown source={post.content} escapeHtml={false}/>
                 <p>
-                  <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+                
+                  <Moment format="MMM Do YYYY">{post.published_at}</Moment>
                 </p>
               </div>
             </div>
           </div>
         );
       }}
-    </Query>
+    </Render>
   );
 };
 
-export default Article;
+export default Post;

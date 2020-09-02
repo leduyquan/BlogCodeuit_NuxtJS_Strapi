@@ -24,6 +24,9 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
-    "react-moment": "^0.9.7"
+    "react-moment": "^0.9.7",
+    "react-smackdown": "^0.8.8",
+    "react-syntax-highlighter": "^13.5.1",
+    "reprism": "^0.0.11"
   }
 }

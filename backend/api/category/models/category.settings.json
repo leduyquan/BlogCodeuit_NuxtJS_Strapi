@@ -9,10 +9,19 @@
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
-      "private": true,
+      "required": true,
       "unique": true
+    },
+    "posts": {
+      "via": "category",
+      "collection": "post"
+    },
+    "path": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
     }
   }
 }

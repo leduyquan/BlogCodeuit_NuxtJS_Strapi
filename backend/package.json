@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
@@ -28,7 +28,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "cf738500-0901-49de-8dca-b174cdaa6ef7"
+    "uuid": "959af00f-5c2f-4acd-bf7b-953fe00a01be"
   },
   "engines": {
     "node": ">=10.0.0",
