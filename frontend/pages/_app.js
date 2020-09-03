@@ -3,7 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import withData from '../resources/utils/apollo';
 // import Nav from '..resources/components/nav';
-import '../resources/assets/css/style.css';
+import '../resources/assets/css/style.scss';
 
 const App = ({ Component, pageProps, apollo }) => {
     return (
@@ -13,10 +13,6 @@ const App = ({ Component, pageProps, apollo }) => {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches" />
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
-                <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
             </Head>
             {/* <Nav></Nav> */}
             <Component {...pageProps} />

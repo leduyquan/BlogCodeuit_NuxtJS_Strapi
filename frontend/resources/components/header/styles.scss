@@ -1,0 +1,40 @@
+.global-header {
+    border-bottom: 1px solid #e7e7e8;
+    border-top: 0;
+    color: #333;
+    width: 100%;
+    z-index: 50000;
+    background-color: #FFF;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 64px;
+        z-index: 2;
+        margin: auto;
+    }
+
+    &__logo {
+        img {
+            display: block;
+            width: 132px;
+            height: auto;
+        }
+    }
+
+    > ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        font-size: .625em;
+        > li {
+            padding: 0 12px;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}

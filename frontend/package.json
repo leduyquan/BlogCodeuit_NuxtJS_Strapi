@@ -10,6 +10,7 @@
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
     "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
     "apollo-link-http": "^1.5.17",
@@ -21,12 +22,14 @@
     "next": "9.5.2",
     "next-fonts": "^1.4.0",
     "next-with-apollo": "^5.1.0",
+    "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
     "react-smackdown": "^0.8.8",
     "react-syntax-highlighter": "^13.5.1",
-    "reprism": "^0.0.11"
+    "reprism": "^0.0.11",
+    "sass": "^1.26.10"
   }
 }
