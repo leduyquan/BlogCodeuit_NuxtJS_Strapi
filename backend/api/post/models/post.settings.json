@@ -40,6 +40,9 @@
     "category": {
       "model": "category",
       "via": "posts"
+    },
+    "descriptions": {
+      "type": "text"
     }
   }
 }

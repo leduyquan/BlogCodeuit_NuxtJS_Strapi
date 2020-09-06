@@ -1,4 +1,10 @@
-body {margin:0;padding:0}
+@import "./common"; 
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
 
 
 .w-display {
@@ -13,8 +19,14 @@ body {margin:0;padding:0}
     margin: 0 auto;
 }
 
-.picture {
+.picture--latest {
     display: block;
     width: 100%;
+    height: auto
+}
+
+.picture--item {
+    display: block;
+    width: 250px;
     height: auto
 }

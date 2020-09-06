@@ -1,14 +1,30 @@
-const withSass = require('@zeit/next-sass')
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
+const withSass = require('@zeit/next-sass');
 const withFonts = require('next-fonts');
-require("dotenv").config();
+require('dotenv').config();
 
-module.exports = withSass({
-	env: {
-		API_URL: process.env.API_URL
-	},
-	//cssModules: true,
-	// cssLoaderOptions: {
-	// 	importLoaders: 1,
-	// 	localIdentName: "[local]___[hash:base64:5]",
-	// }
-});
+
+module.exports = withPlugins([
+    [withSass],
+    [withImages],
+    {
+        env: {
+            API_URL: process.env.API_URL,
+        },
+    }
+  ]);
+// module.exports = withPlugins(
+//     [
+//         [
+//             withSass
+//         ],
+//     ],
+//     {
+//         env: {
+//             API_URL: process.env.API_URL,
+//         },
+//         /* global config here ... */
+//     }
+// );
+

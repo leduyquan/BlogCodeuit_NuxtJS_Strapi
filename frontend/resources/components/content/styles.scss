@@ -1,7 +1,82 @@
 .card-latest {
-    
+    padding-bottom: 20px;
+    display: block;
+    border-bottom: 4px solid #3E3E3E;
+
+    .title {
+        a {
+            margin-top: 12px;
+            display: block;
+            font-family: SFD-Bold;
+            text-decoration: none;
+            font-size: 26px;
+            line-height: 30px;
+            color: #222;
+            text-decoration: none;
+            transition: color .3s;
+            -webkit-transition: color .3s;
+            -moz-transition: color .3s;
+        }
+    }
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+        color: #444;
+        margin: 10px 0;
+    }
 }
 
-.card-item {
+ul {
+    list-style: none;
+    .card-item {
+        padding: 25px 0;
+        border-bottom: 1px solid #ebebeb;
 
+        &--left {
+            width: 250px;
+            min-width: 250px;
+        }
+
+        &--right {
+            flex-grow: 1;
+
+            .title {
+                a {
+                    font-family: SFD-Bold;
+                    font-size: 22px;
+                    line-height: 28px;
+                    color: #333;
+                    text-decoration: none;
+                    display: block;
+                    margin-bottom: 10px;
+                    margin-top: -5px;
+                    transition: all .3s;
+                    -webkit-transition: all .3s;
+                }
+            }
+
+            .meta {
+                margin-bottom: 10px;
+                color: #8e8e8e;
+                .category {
+                    display: inline-block;
+                    background-color: #3E3E3E;
+                    color: #fff;
+                    line-height: 1.25;
+                    padding: 0px 5px;
+                }
+                .time {
+                    position: relative;
+                    font-family: SFD-Medium;
+                    font-size: 14px;
+                }
+            }
+            .description {
+                font-size: 13px;
+                font-family: Arial;
+                color: #555;
+                line-height: 19px;
+            }
+        }
+    }
 }

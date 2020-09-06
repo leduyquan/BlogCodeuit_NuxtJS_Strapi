@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 const Render = ({ children, query, id, name }) => {
     const { data, loading, error } = useQuery(query, {
-        variables: { id: id },
+        variables: { id: id},
     });
 
     if (loading) return <p>Loading...</p>;

@@ -2,20 +2,20 @@ import React, { useEffect } from 'react';
 import './styles.scss';
 
 const Header = () => {
-    const sticky = () => {
-        var header = document.getElementById("myHeader");
-        var sticky = header.offsetTop;
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
+    // const sticky = () => {
+    //     var header = document.getElementById("myHeader");
+    //     var sticky = header.offsetTop;
+    //     if (window.pageYOffset > sticky) {
+    //       header.classList.add("sticky");
+    //     } else {
+    //       header.classList.remove("sticky");
+    //     }
+    //   }
 
-    useEffect(() => {
-        window.onscroll = () => sticky();
+    // useEffect(() => {
+    //     window.onscroll = () => sticky();
 
-    }, [])
+    // }, [])
 
     return (
         <header id="myHeader" className="global-header">

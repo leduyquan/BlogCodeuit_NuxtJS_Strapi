@@ -6,6 +6,7 @@ const POSTS_QUERY = gql`
             id
             path
             title
+            descriptions
             category {
                 id
                 name

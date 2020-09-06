@@ -4,12 +4,10 @@
         margin-top: 35px;
 
         &__main {
-            background-color: red;
             flex-basis: 710px;
             flex-shrink: 0;
         }
         &__sidebar {
-            background-color: green;
         }
     }
 }
