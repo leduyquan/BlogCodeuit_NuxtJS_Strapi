@@ -9,16 +9,23 @@ const Search = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('ee',e)
-        const results = context.posts.filter((c => c.title.toLowerCase().includes('từ chối')))
-        console.log('conte', results)
-        setContext({posts: results})
+        const text = document.getElementById("searchTxt").value;
+        const results = context.posts.filter((c => c.title.toLowerCase().includes(text)))
+
+        console.log('results',results)
+        console.log('context.posts',context.posts)
+        if (text) {
+            setContext({posts: results, isSearch: true});
+        } else {
+            setContext({posts: context.posts, isSearch: false});
+        }
     };
 
     return (
         <aside className="widget-search">
             <form onSubmit={handleSubmit} className="search-form">
                 <input
+                    id="searchTxt"
                     className="search-field"
                     type="text"
                     //value={query}
