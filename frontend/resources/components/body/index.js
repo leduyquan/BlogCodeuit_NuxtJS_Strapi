@@ -7,7 +7,7 @@ import { Context } from '../../utils/context';
 import './styles.scss';
 
 const Body = () => {
-    const [context, setContext] = useState({posts: [], isSearch: false});
+    const [context, setContext] = useState({posts: [], isSearch: false, needRender: true});
     return (
         <div className="container">
             <div className="w-display">

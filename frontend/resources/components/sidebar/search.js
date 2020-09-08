@@ -14,10 +14,12 @@ const Search = () => {
 
         console.log('results',results)
         console.log('context.posts',context.posts)
+        console.log('context.needRender',context.needRender)
         if (text) {
-            setContext({posts: results, isSearch: true});
+            setContext({posts: results, isSearch: true, needRender: false});
         } else {
-            setContext({posts: context.posts, isSearch: false});
+            console.log('diu ma')
+            setContext({posts: context.posts, isSearch: false, needRender: true});
         }
     };
 
