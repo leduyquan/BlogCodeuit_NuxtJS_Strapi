@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Router from 'next/router'
+import Link from 'next/link'
 import './styles.scss';
 
 const Header = () => {
@@ -20,9 +22,11 @@ const Header = () => {
     return (
         <header id="myHeader" className="global-header">
             <nav className="wrapper w-display">
-                <a className="global-header__logo">
-                    <img src="https://strapi.io/assets/strapi-logo-dark.svg"/>
-                </a>
+                <Link href='/'>
+                    <a className="global-header__logo" onClick={() => Router.reload()}>
+                        <img src="https://strapi.io/assets/strapi-logo-dark.svg"/>
+                    </a>
+                </Link>
                 <ul className="global-header__social">
                     <li>
                         <a className="social__facebook" href="https://www.facebook.com/sharer/sharer.php?text=The+airline+industry+is+ditching+change+fees+because+it%E2%80%99s+desperate+for+people+to+fly&amp;u=https%3A%2F%2Fwww.theverge.com%2F2020%2F8%2F31%2F21409152%2Funited-delta-airlines-change-fee-eliminate-covid" data-analytics-social="facebook">
