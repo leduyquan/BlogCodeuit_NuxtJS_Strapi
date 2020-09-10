@@ -9,7 +9,7 @@
     width: 100%;
     word-wrap: break-word;
 
-    .search-field {
+    input[type=text] {
         background-color: #fff;
         color: #2b2b2b;
         width: 100%;
@@ -17,6 +17,9 @@
         border: 1px solid rgba(0,0,0,.1);
         border-radius: 2px;
         padding: 5px 5px 5px 8px;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;
     }
 
     .search-submit {

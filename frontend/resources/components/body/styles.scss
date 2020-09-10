@@ -12,8 +12,31 @@
     }
 }
 
-@media (min-width: 600px) {
+@media only screen and (max-width : 1190px){
     .container {
+        .segment {
+            display: inline;
+            &__main {
+                margin-top: 30px;
+            }
+            &__sidebar {
+                .widget-search {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 1190px){
+    .container {
+        .segment {
+            &__main {
+                .widget-search {
+                    display: none;
+                }
+            }
+        }
         .segment__sidebar {
             flex-basis: 300px;
             flex-shrink: 0;

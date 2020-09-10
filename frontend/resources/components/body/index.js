@@ -3,6 +3,7 @@ import Content from '../content';
 import Sidebar from '../sidebar';
 import Render from '../render';
 import POSTS_QUERY from '../../graphql/post/posts';
+import Search from '../sidebar/search';
 import { Context } from '../../utils/context';
 import './styles.scss';
 
@@ -14,6 +15,7 @@ const Body = () => {
                 <div className="segment w-content">
                     <Context.Provider value={[context, setContext]} >
                         <div className="segment__main">
+                            <Search />
                             <Render query={POSTS_QUERY}>
                                 {({ data: { posts } }) => {
                                     return <Content posts={posts}/>;

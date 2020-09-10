@@ -80,3 +80,25 @@ ul {
         }
     }
 }
+
+@media only screen and (max-width : 769px){
+    ul {
+        .card-item {
+            &--left {
+                width: 200px;
+                min-width: 200px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 576px){
+    ul {
+        .card-item {
+            &--left {
+                width: 160px;
+                min-width: 160px;
+            }
+        }
+    }
+}

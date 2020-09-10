@@ -20,7 +20,6 @@ const Search = () => {
             <form onSubmit={handleSubmit} className="search-form">
                 <input
                     id="searchTxt"
-                    className="search-field"
                     type="text"
                     placeholder="Search ..."
                 />

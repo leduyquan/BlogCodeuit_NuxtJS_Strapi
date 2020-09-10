@@ -12,6 +12,9 @@ module.exports = withPlugins([
         env: {
             API_URL: process.env.API_URL,
         },
+        devIndicators: {
+            autoPrerender: false,
+        },
     }
   ]);
 // module.exports = withPlugins(

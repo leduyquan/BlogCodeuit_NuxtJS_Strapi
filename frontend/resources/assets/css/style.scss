@@ -1,4 +1,4 @@
-@import "./common"; 
+@import "./common";
 
 * {
     margin: 0;
@@ -15,7 +15,6 @@
 }
 
 .w-content {
-    width: 1040px;
     margin: 0 auto;
 }
 
@@ -29,4 +28,10 @@
     display: block;
     width: 250px;
     height: auto
+}
+
+@media only screen and (min-width : 1190px){
+    .w-content {
+        width: 1040px;
+    }
 }
