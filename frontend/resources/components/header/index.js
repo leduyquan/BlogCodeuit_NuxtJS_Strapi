@@ -1,6 +1,7 @@
 import React from 'react';
 import Router from 'next/router'
 import Link from 'next/link'
+import logo from '../../assets/images/logo.svg'
 import './styles.scss';
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
             <nav className="wrapper w-display">
                 <Link href='/'>
                     <a className="global-header__logo" onClick={() => Router.reload()}>
-                        <img src="https://strapi.io/assets/strapi-logo-dark.svg"/>
+                        <img src={logo} alt="logo" height="60" />
                     </a>
                 </Link>
                 <ul className="global-header__social">

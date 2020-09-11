@@ -6,7 +6,7 @@ const AboutMe = () => {
             <h1 className="widget-title">About me</h1>
             <div className="widget-body">
                 <img src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
-                <div className="widget-content">
+                {/* <div className="widget-content">
                     <p>Hello, mình là Lê Duy Quân, hiện đang là FE Developer.</p>
                     <p>
                         Lúc mới bắt đầu ra trường, mình khá bối rối trong việc định
@@ -20,6 +20,20 @@ const AboutMe = () => {
                     </p>
                     <p>Hi vọng các bạn sẽ tiến bộ và đi nhanh hơn khi có những kiến thức
                     trong Blog này.
+                    </p>
+                    <p>
+                        <a href="https://toidicodedao.com/about/">Đọc thêm!</a>
+                    </p>
+                </div> */}
+                <div className="widget-content">
+                    <p>Kháng các đòn tâm linh: Giáo sư X đã đặt vào trong đầu anh lá chắn tâm linh, các đòn tâm linh rất khó ảnh hưởng được anh</p>
+                    <p>
+                        Kĩ năng chiến đấu: Level Max, phong cách của anh ko bao giờ chịu làm theo kế hoạch, thích thì cứ nhào dzô
+                    </p>
+                    <p>
+                    Là xạ thủ giỏi, nhưng còn giỏi hơn khi ko sử dụng súng.
+                    </p>
+                    <p>ảo kiếm Muramasa: Thanh kiếm chứa dựng linh hồn của Muramasa, bị chém thì dường như anh ko thể lành được
                     </p>
                     <p>
                         <a href="https://toidicodedao.com/about/">Đọc thêm!</a>
