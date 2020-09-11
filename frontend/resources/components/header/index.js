@@ -2,6 +2,7 @@ import React from 'react';
 import Router from 'next/router'
 import Link from 'next/link'
 import logo from '../../assets/images/logo.svg'
+import socialIcon from '../../assets/images/social.svg'
 import './styles.scss';
 
 const Header = () => {
@@ -30,12 +31,18 @@ const Header = () => {
                 </Link>
                 <ul className="global-header__social">
                     <li>
-                        <a className="social__facebook" href="https://www.facebook.com/sharer/sharer.php?text=The+airline+industry+is+ditching+change+fees+because+it%E2%80%99s+desperate+for+people+to+fly&amp;u=https%3A%2F%2Fwww.theverge.com%2F2020%2F8%2F31%2F21409152%2Funited-delta-airlines-change-fee-eliminate-covid" data-analytics-social="facebook">
-                            {/* <svg role="img" class="p-svg-icon c-social-buttons__svg"><use href="#icon-facebook"></use></svg> */}
-                            <span className="c-social-buttons__text">
-                                Facebook
-                            </span>
-                        </a>
+                        <Link href="https://www.facebook.com/sharer/sharer.php?text=The+airline+industry+is+ditching+change+fees+because+it%E2%80%99s+desperate+for+people+to+fly&amp;u=https%3A%2F%2Fwww.theverge.com%2F2020%2F8%2F31%2F21409152%2Funited-delta-airlines-change-fee-eliminate-covid">
+                            <a className="social-facebook"  data-analytics-social="facebook">
+                                 <svg><use href={socialIcon + "#icon-facebook"}></use></svg>
+                                 {/* <svg width="35" height="32" fill="#fff">
+                                    <use xlink="http://www.w3.org/1999/xlink"
+                                        href="assetUrl('img/icons.svg#file-download')"></use>
+                                </svg> */}
+                                <span className="social-buttons">
+                                    Facebook
+                                </span>
+                            </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>

@@ -23,6 +23,23 @@
         }
     }
 
+    &__social {
+        .social-facebook {
+            text-decoration: none;
+            .social-buttons {
+                color: #424242;
+                
+                font-family: Helvetica, sans-serif;
+                font-size: 11px;
+                letter-spacing: .1em;
+            }
+
+            // .social-buttons::selection {
+            //     background: #B4D5FF;
+            // }
+        }
+    }
+
     > ul {
         list-style-type: none;
         margin: 0;
@@ -32,6 +49,8 @@
             padding: 0 12px;
         }
     }
+
+
 }
 
 .sticky {
