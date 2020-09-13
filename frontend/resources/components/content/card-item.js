@@ -15,7 +15,7 @@ const CardItem = ({ post }) => {
                     as={'/post/' + post.path}>
                     <a className="link-reset">
                         <img
-                            className="picture--latest"
+                            className="picture--latest border-item"
                             src={bannerUrl}
                             alt={post.banner.url}
                         />

@@ -5,7 +5,7 @@ const AboutMe = () => {
         <aside id="text-20" className="widget-text">
             <h1 className="widget-title">About me</h1>
             <div className="widget-body">
-                <img src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
+                <img className="border-item" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
                 {/* <div className="widget-content">
                     <p>Hello, mình là Lê Duy Quân, hiện đang là FE Developer.</p>
                     <p>

@@ -8,14 +8,18 @@ import { Context } from '../../utils/context';
 import './styles.scss';
 
 const Body = () => {
-    const [context, setContext] = useState({posts: [], isSearch: false, needRender: true});
+    const [context, setContext] = useState({
+        posts: [],
+        isSearch: false,
+        needRender: true
+    });
     return (
         <div className="container">
             <div className="w-display">
                 <div className="segment w-content">
                     <Context.Provider value={[context, setContext]} >
                         <div className="segment__main">
-                            <Search />
+                            <Search position="top"/>
                             <Render query={POSTS_QUERY}>
                                 {({ data: { posts } }) => {
                                     return <Content posts={posts}/>;

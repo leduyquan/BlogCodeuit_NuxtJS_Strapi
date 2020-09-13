@@ -5,10 +5,12 @@
     width: 100%;
     z-index: 50000;
     background-color: #FFF;
+    animation-duration: 0.8s;
 
     .wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         min-height: 64px;
         z-index: 2;
@@ -24,20 +26,48 @@
     }
 
     &__social {
+        padding-left: 15px;
         .social-facebook {
             text-decoration: none;
+            width: 100%;
+            border-radius: 50%;
+            padding-left: 4px;
+            transition: opacity .3s;
+            color: #424242;
+            letter-spacing: .1em;
+            line-height: 1;
+            text-transform: uppercase;
+            align-items: center;
+            display: flex;
+            padding: 8px;
+            opacity: 0.9;
+            font-weight: 500;
+
+            > svg {
+                height: 21px;
+                width: 21px;
+                fill: #325a97;
+            }
             .social-buttons {
                 color: #424242;
-                
+                padding-left: 7px;
                 font-family: Helvetica, sans-serif;
                 font-size: 11px;
                 letter-spacing: .1em;
             }
-
-            // .social-buttons::selection {
-            //     background: #B4D5FF;
-            // }
         }
+
+        .social-facebook:hover {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        font-family: Helvetica, sans-serif;
+        font-weight: 600;
+        opacity: 0.77;
+        color: #424242;
+        text-shadow: 4px 2px 5px grey;
     }
 
     > ul {
@@ -49,11 +79,30 @@
             padding: 0 12px;
         }
     }
-
-
 }
 
 .sticky {
     position: fixed;
     top: 0;
+    animation-name: fadeInDown;
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
+
+@media only screen and (max-width : 769px){
+    .global-header {
+        &__title {
+            display: none;
+        }
+    }
 }

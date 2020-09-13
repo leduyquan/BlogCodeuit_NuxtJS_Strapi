@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { Context } from '../../utils/context';
 
-const Search = () => {
+const Search = ({position}) => {
     const [context, setContext] = useContext(Context);
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const text = document.getElementById("searchTxt").value;
+        const text = document.getElementById("searchTxt-" + position).value;
         const results = context.posts.filter((c => c.title.toLowerCase().includes(text)));
         if (text) {
             setContext({posts: results, isSearch: true, needRender: false});
@@ -19,7 +19,7 @@ const Search = () => {
         <aside className="widget-search">
             <form onSubmit={handleSubmit} className="search-form">
                 <input
-                    id="searchTxt"
+                    id={"searchTxt-" + position}
                     type="text"
                     placeholder="Search ..."
                 />
