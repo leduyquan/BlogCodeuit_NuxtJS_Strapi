@@ -30,6 +30,37 @@
     height: auto
 }
 
+.main {
+    flex-basis: 636px;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width : 1068px){
+    .main {
+        margin-top: 30px;
+    }
+    .sidebar {
+        .widget-search {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width : 1068px){
+    .main {
+        .widget-search {
+            display: none;
+        }
+    }
+
+    .sidebar {
+        flex-basis: 265px;
+        flex-shrink: 0;
+        min-width: 0;
+        margin-left: 30px;
+    }
+}
+
 @media only screen and (min-width : 1190px){
     .w-content {
         width: 931px;

@@ -1,11 +1,17 @@
 import React, {useEffect} from 'react';
-import Router from 'next/router'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import logo from '../../assets/images/logo.svg'
 import socialIcon from '../../assets/images/social.svg'
 import './styles.scss';
 
 const Header = () => {
+    const router = useRouter()
+
+    useEffect(() => {
+        window.onscroll = () => sticky();
+    }, [])
+
     const sticky = () => {
         var header = document.getElementById("myHeader");
         var sticky = header.offsetTop;
@@ -16,17 +22,12 @@ const Header = () => {
         }
       }
 
-    useEffect(() => {
-        window.onscroll = () => sticky();
-
-    }, [])
-
     return (
         <header id="myHeader" className="global-header">
             <nav className="wrapper w-display">
                 <div className="flex flex-vertical-centered">
                     <Link href='/'>
-                        <a className="global-header__logo" onClick={() => Router.reload()}>
+                        <a className="global-header__logo" onClick={() => router.reload()}>
                             <img src={logo} alt="logo" height="60" />
                         </a>
                     </Link>

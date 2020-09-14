@@ -36,12 +36,13 @@
                     display: none;
                 }
             }
-        }
-        .segment__sidebar {
-            flex-basis: 265px;
-            flex-shrink: 0;
-            min-width: 0;
-            margin-left: 30px;
+
+            &__sidebar {
+                flex-basis: 265px;
+                flex-shrink: 0;
+                min-width: 0;
+                margin-left: 30px;
+            }
         }
     }
 }

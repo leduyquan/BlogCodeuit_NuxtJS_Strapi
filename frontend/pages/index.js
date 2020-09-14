@@ -1,16 +1,33 @@
-import React from 'react';
-import Header from '../resources/components/header';
-import Body from '../resources/components/body';
-import Footer from '../resources/components/footer';
+import React, { useState } from 'react';
+import Content from '../resources/components/content';
+import Sidebar from '../resources/components/sidebar';
+import Render from '../resources/components/render';
+import POSTS_QUERY from '../resources/graphql/post/posts';
+import Search from '../resources/components/sidebar/search';
+import { Context } from '../resources/utils/context';
+import '../resources/assets/css/style.scss';
 
-const Home = () => {
+const HomePage = () => {
+    const [context, setContext] = useState({
+        posts: [],
+        isSearch: false,
+        needRender: true,
+    });
     return (
-        <React.Fragment>
-            <Header />
-            <Body />
-            <Footer />
-        </React.Fragment>
+        <Context.Provider value={[context, setContext]}>
+            <div className="main">
+                <Search position="top" />
+                <Render query={POSTS_QUERY}>
+                    {({ data: { posts } }) => {
+                        return <Content posts={posts} />;
+                    }}
+                </Render>
+            </div>
+            <div className="sidebar">
+                <Sidebar />
+            </div>
+        </Context.Provider>
     );
 };
 
-export default Home;
+export default HomePage;
