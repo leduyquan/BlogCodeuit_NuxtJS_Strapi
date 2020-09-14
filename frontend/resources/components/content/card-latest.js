@@ -22,6 +22,9 @@ const CardLatest = ({ post }) => {
                     </Link>
                 </h2>
                 <p className="description">{post.descriptions} </p>
+                <div className="meta">
+                    <a className="category">Java</a>
+                </div>
             </div>
         </div>
     );

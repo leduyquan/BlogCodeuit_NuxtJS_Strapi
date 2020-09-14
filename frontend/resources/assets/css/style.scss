@@ -30,15 +30,19 @@
     height: auto
 }
 
+@media only screen and (min-width : 1190px){
+    .w-content {
+        width: 931px;
+    }
+}
+
+//HomePage
 .main {
     flex-basis: 636px;
     flex-shrink: 0;
 }
 
 @media only screen and (max-width : 1068px){
-    .main {
-        margin-top: 30px;
-    }
     .sidebar {
         .widget-search {
             display: none;
@@ -52,7 +56,6 @@
             display: none;
         }
     }
-
     .sidebar {
         flex-basis: 265px;
         flex-shrink: 0;
@@ -60,9 +63,12 @@
         margin-left: 30px;
     }
 }
+//End
 
-@media only screen and (min-width : 1190px){
-    .w-content {
-        width: 931px;
-    }
+//PostPage
+.post {
+    margin: 0 auto;
+    background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 80%,#ebf4fd);
 }
+//End
+

@@ -18,6 +18,17 @@
             -moz-transition: color .3s;
         }
     }
+    .meta {
+        margin-bottom: 10px;
+        color: #8e8e8e;
+        .category {
+            display: inline-block;
+            background-color: #3E3E3E;
+            color: #fff;
+            line-height: 1.25;
+            padding: 0px 5px;
+        }
+    }
     .description {
         font-size: 14px;
         line-height: 20px;

@@ -34,19 +34,19 @@
 
 @for $i from 0 through 20 {
     .margin-#{$i*5} {
-        margin: #{$i * 5}px;
+        margin: #{$i * 5}px !important;
     }
     .m-left-#{$i*5} {
-        margin-left: #{$i * 5}px;
+        margin-left: #{$i * 5}px !important;
     }
     .m-top-#{$i*5} {
-        margin-top: #{$i * 5}px;
+        margin-top: #{$i * 5}px !important;
     }
     .m-right-#{$i*5} {
-        margin-right: #{$i * 5}px;
+        margin-right: #{$i * 5}px !important;
     }
     .m-bot-#{$i*5} {
-        margin-bottom: #{$i * 5}px;
+        margin-bottom: #{$i * 5}px !important;
     }
 }
 

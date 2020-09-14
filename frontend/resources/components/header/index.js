@@ -44,7 +44,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-                <span className="global-header__title">Từ Teenager đến Development</span>
+                <span className="global-header__title">Từ Teenager đến Developer</span>
             </nav>
         </header>
     );

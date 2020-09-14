@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <React.Fragment>
             <Header />
             <div className="container">
-                <div className="w-display">
+                <div className="w-display m-top-35">
                     <div className="segment w-content">{children}</div>
                 </div>
             </div>
