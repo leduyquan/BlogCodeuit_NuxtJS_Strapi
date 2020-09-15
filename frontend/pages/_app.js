@@ -13,7 +13,7 @@ const App = ({ Component, pageProps, apollo }) => {
                 <title>Code Khá Vui</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="icon" href={favicon} />
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches" />
+                <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Muli&display=swap" rel="stylesheet"></link>
             </Head>
             <Layout>
                 <Component {...pageProps} />

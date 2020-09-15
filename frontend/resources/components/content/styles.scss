@@ -7,10 +7,9 @@
         a {
             margin-top: 12px;
             display: block;
-            font-family: SFD-Bold;
             text-decoration: none;
             font-size: 26px;
-            line-height: 30px;
+            line-height: 34px;
             color: #222;
             text-decoration: none;
             transition: color .3s;
@@ -19,7 +18,7 @@
         }
     }
     .description {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
         color: #444;
         margin: 10px 0;
@@ -29,17 +28,18 @@
 .meta {
     margin-bottom: 10px;
     .category {
+        font-family: initial;
         display: inline-block;
         background-color: #3E3E3E;
         color: #fff;
         line-height: 1.25;
-        padding: 0 5px 2px;
+        padding: 1px 6px;
         border-radius: 3px;
+        box-shadow: 1px 1px 4px 0 rgba(117, 141, 166, 0.2142);
     }
     .time {
         position: relative;
-        font-family: SFD-Medium;
-        font-size: 14px;
+        font-size: 13px;
         color: #8e8e8e;
     }
 }
@@ -60,9 +60,8 @@ ul {
 
             .title {
                 a {
-                    font-family: SFD-Bold;
                     font-size: 22px;
-                    line-height: 28px;
+                    line-height: 29px;
                     color: #333;
                     text-decoration: none;
                     display: block;
@@ -75,7 +74,6 @@ ul {
 
             .description {
                 font-size: 13px;
-                font-family: Arial;
                 color: #555;
                 line-height: 19px;
             }

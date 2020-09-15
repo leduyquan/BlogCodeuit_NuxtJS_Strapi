@@ -4,7 +4,11 @@
     margin: 0;
     padding: 0;
     border: 0;
-  }
+}
+
+html {
+    font-family: 'Muli',sans-serif;
+}
 
 .t-color-main {
     color: #325a97;
@@ -147,11 +151,10 @@
             .typography {
                 word-break: break-word;
                 white-space: pre-line;
-                font-family: Poppins,serif;
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 28px;
-        color: #5e709d;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 28px;
+                color: #5e709d;
             }
         }
         
