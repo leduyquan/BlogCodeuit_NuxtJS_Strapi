@@ -33,26 +33,24 @@
             border-radius: 50%;
             padding-left: 4px;
             transition: opacity .3s;
-            color: #424242;
             letter-spacing: .1em;
             line-height: 1;
             text-transform: uppercase;
             align-items: center;
             display: flex;
             padding: 8px;
-            opacity: 0.9;
-            font-weight: 500;
 
             > svg {
                 height: 21px;
                 width: 21px;
-                fill: #325a97;
+                fill: #476BA2;
             }
             .social-buttons {
-                color: #424242;
+                color: #476BA2;
                 padding-left: 7px;
                 font-family: Helvetica, sans-serif;
                 font-size: 11px;
+                font-weight: 500;
                 letter-spacing: .1em;
             }
         }
@@ -64,10 +62,9 @@
 
     &__title {
         font-family: Helvetica, sans-serif;
-        font-weight: 600;
-        opacity: 0.77;
-        color: #424242;
-        text-shadow: 4px 2px 5px grey;
+        opacity: 0.9;
+        color: #476BA2;
+        text-shadow: 2px 1px 4px grey;
     }
 
     > ul {

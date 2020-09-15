@@ -36,7 +36,7 @@ const AboutMe = () => {
                     <p>ảo kiếm Muramasa: Thanh kiếm chứa dựng linh hồn của Muramasa, bị chém thì dường như anh ko thể lành được
                     </p>
                     <p>
-                        <a href="https://toidicodedao.com/about/">Đọc thêm!</a>
+                        <a style={{color: "#476BA2"}} href="https://toidicodedao.com/about/">Đọc thêm!</a>
                     </p>
                 </div>
             </div>

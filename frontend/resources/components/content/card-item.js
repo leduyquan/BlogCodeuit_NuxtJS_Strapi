@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Moment from 'react-moment';
+
 import './styles.scss';
 
 const CardItem = ({ post }) => {
@@ -27,14 +29,14 @@ const CardItem = ({ post }) => {
                     <Link
                         href={{ pathname: 'children/post', query: { id: post.id } }}
                         as={'/post/' + post.path}>
-                        <a className="link-reset">
-                        {post.title}
-                        </a>
+                        <a className="link-reset">{post.title}</a>
                     </Link>
                 </h4>
                 <div className="meta">
                     <a className="category">Java</a>
-                    <span className="time"> - 4 giờ trước</span>
+                    <span className="time">
+                        {' '} - <Moment format="MMM D, YYYY">{post.published_at}</Moment>
+                    </span>
                 </div>
                 <span className="description">{post.descriptions}</span>
             </div>

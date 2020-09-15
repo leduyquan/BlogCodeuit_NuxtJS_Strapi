@@ -17,28 +17,33 @@ const Post = () => {
                 return (
                     <div className="background w-display m-top-35">
                         <div className="segment w-content">
-                            <div className="post w-display">
+                            <article className="post w-display">
                                 <section className="post__header">
                                     <h1 className="post__header__title">{post.title}</h1>
                                     <div className="post__header__banner">
-                                        <img
-                                            className="picture--latest border-item"
-                                            src={bannerUrl}></img>
+                                        <img className="picture--latest border-item" src={bannerUrl}></img>
                                     </div>
                                 </section>
                                 <section className="post__content">
                                     <div className="content-display">
                                         <div className="author">
-                                            
+                                            <div className="avatar"><img className="col-100p" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" /></div>
+                                            <div className="name-date">
+                                                <p className="name fw-bold">Quân Duy</p>
+                                                <p className="datetime">
+                                                    <Moment format="LL">
+                                                        {post.published_at}
+                                                    </Moment>
+                                                </p>
+                                            </div>
                                         </div>
                                         <div className="separator"></div>
                                         <div className="typography">
-
-                                        <ReactMarkdown source={post.content} escapeHtml={false} />
+                                            <ReactMarkdown source={post.content} escapeHtml={false} />
                                         </div>
                                     </div>
                                 </section>
-                            </div>
+                            </article>
                         </div>
                     </div>
                     // <div>

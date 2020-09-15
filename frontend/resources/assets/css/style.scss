@@ -6,6 +6,14 @@
     border: 0;
   }
 
+.t-color-main {
+    color: #325a97;
+    color: #476BA2;
+}
+
+.t-color-other {
+    color: #5e709d;
+}
 
 .w-display {
     width: 83.3333333333%;
@@ -106,6 +114,25 @@
             .author {
                 display: flex;
                 align-items: center;
+
+                .avatar {
+                    position: relative;
+                    overflow: hidden;
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 18px;
+                    border-radius: 50%;
+                }
+                .name {
+                    font-size: 17px;
+                    line-height: 22px;
+                    color: #5e709d;
+                }
+                .datetime {
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #5e709d;
+                }
             }
             .separator {
                 margin: 32px 0 40px;
