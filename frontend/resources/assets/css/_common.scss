@@ -19,6 +19,7 @@
 
 .border-item {
     border-radius: 5px;
+    box-shadow: 1px 1px 6px 0 rgba(117,141,166,.2142);
 }
 
 @for $i from 8 to 30 {

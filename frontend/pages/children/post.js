@@ -10,18 +10,36 @@ const Post = () => {
     return (
         <Render query={POST_QUERY} id={router.query.id}>
             {({ data: { post } }) => {
-                const bannerUrl = process.env.NODE_ENV !== 'development'
+                const bannerUrl =
+                    process.env.NODE_ENV !== 'development'
                         ? post.banner.url
                         : process.env.API_URL + post.banner.url;
                 return (
-                    <div className="post">
-                        <div className="post__header w-display">
-                            <h1 className="post__title">{post.title}</h1>
-                            <div className="post__banner">
-                                <img className="picture--latest border-item" src={bannerUrl}></img>
+                    <div className="background w-display m-top-35">
+                        <div className="segment w-content">
+                            <div className="post w-display">
+                                <section className="post__header">
+                                    <h1 className="post__header__title">{post.title}</h1>
+                                    <div className="post__header__banner">
+                                        <img
+                                            className="picture--latest border-item"
+                                            src={bannerUrl}></img>
+                                    </div>
+                                </section>
+                                <section className="post__content">
+                                    <div className="content-display">
+                                        <div className="author">
+                                            
+                                        </div>
+                                        <div className="separator"></div>
+                                        <div className="typography">
+
+                                        <ReactMarkdown source={post.content} escapeHtml={false} />
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
-                        <div className="post__content w-display"></div>
                     </div>
                     // <div>
                     //     <div

@@ -14,19 +14,23 @@ const HomePage = () => {
         needRender: true,
     });
     return (
-        <Context.Provider value={[context, setContext]}>
-            <div className="main">
-                <Search position="top" />
-                <Render query={POSTS_QUERY}>
-                    {({ data: { posts } }) => {
-                        return <Content posts={posts} />;
-                    }}
-                </Render>
+        <div className="w-display m-top-35">
+            <div className="segment w-content">
+                <Context.Provider value={[context, setContext]}>
+                    <div className="main">
+                        <Search position="top" />
+                        <Render query={POSTS_QUERY}>
+                            {({ data: { posts } }) => {
+                                return <Content posts={posts} />;
+                            }}
+                        </Render>
+                    </div>
+                    <div className="sidebar">
+                        <Sidebar />
+                    </div>
+                </Context.Provider>
             </div>
-            <div className="sidebar">
-                <Sidebar />
-            </div>
-        </Context.Provider>
+        </div>
     );
 };
 
