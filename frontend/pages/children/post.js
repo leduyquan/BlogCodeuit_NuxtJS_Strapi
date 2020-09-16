@@ -32,7 +32,7 @@ const Post = () => {
                                             <div className="name-date">
                                                 <p className="name fw-bold">Quân Duy</p>
                                                 <p className="datetime">
-                                                    <Moment format="LL">
+                                                    <Moment format="L">
                                                         {post.published_at}
                                                     </Moment>
                                                 </p>
