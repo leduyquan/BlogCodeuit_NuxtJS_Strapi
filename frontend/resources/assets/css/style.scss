@@ -8,6 +8,7 @@
 
 html {
     font-family: 'Muli',sans-serif;
+    word-spacing: 0.5px;
 }
 
 .t-color-main {
@@ -90,25 +91,30 @@ html {
 //PostPage
 .background {
     border-radius: 12px;
-    background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 600px,hsla(0,0%,100%,0) 80%,#ebf4fd);
-    //background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 10%,hsla(0,0%,100%,0) 80%,#ebf4fd);
+    background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 600px 45%);
+    //background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 600px,hsla(0,0%,100%,0) 80%,#ebf4fd);
 }
 .post {
-    margin: 0 auto;
     padding-top: 50px;
 
     &__header {
+        margin: 0 37px;
         &__title {
-            margin-bottom: 30px;
+            color: #325a97;
+            font-size: 30px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            text-shadow: 0.5px 0.5px 1px #476BA2;
         }
         &__banner {
+            margin-top: 30px;
             margin-bottom: 60px;
         }
     }
 
     &__content {
         max-width: 980px;
-
+        margin: 0 auto;
         .content-display {
             background-color: #fff;
             border-radius: 20px;
@@ -118,7 +124,6 @@ html {
             .author {
                 display: flex;
                 align-items: center;
-
                 .avatar {
                     position: relative;
                     overflow: hidden;
@@ -129,8 +134,8 @@ html {
                 }
                 .name {
                     font-size: 17px;
-                    line-height: 22px;
-                    color: #5e709d;
+                    line-height: 26px;
+                    color: #E5801B;
                 }
                 .datetime {
                     font-size: 15px;
@@ -151,25 +156,77 @@ html {
             .typography {
                 word-break: break-word;
                 white-space: pre-line;
-                font-size: 17px;
-                font-weight: 400;
-                line-height: 28px;
-                color: #5e709d;
+                line-height: 1.65;
+                h2 {
+                    font-size: 24px;
+                    color: #325a97;
+                    border-bottom: 1px solid rgba(27,31,35,.05);
+                    margin-bottom: 25px;
+                }
+                h3 {
+                    font-size: 21px;
+                    color: #325a97;
+                    border-bottom: 1px solid rgba(27,31,35,.05);
+                    margin-bottom: 25px;
+                }
+                p {
+                    font-size: 17px;
+                    color: #325a97;
+                }
+                pre {
+                    color: #ccc;
+                    background: #2d2d2d;
+                    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+                    font-size: 1em;
+                    text-align: left;
+                    white-space: pre;
+                    word-spacing: normal;
+                    word-break: normal;
+                    word-wrap: normal;
+                    line-height: 1.5;
+                    tab-size: 4;
+                    hyphens: none;
+                    padding: 1em;
+                    margin: 35px 0;
+                    overflow: auto;
+                    border-radius: 3px;
+                    code {
+
+                    }
+                }
             }
         }
-        
     }
 }
 
 @media only screen and (min-width : 992px) {
-    // .post__header__content {
-    //     width: 81.6666666667%;
-    // }
-
-    .content-display {
-        padding: 58px;
+    .post__header__title {
+        margin: 0 40px;
+        font-size: 40px;
     }
+    .post__content {
+        width: 83.333333%;
+        .content-display {
+            padding: 52px;
+            .typography {
+                h2 {
+                    font-size: 26px;
+                }
+                h3 {
+                    font-size: 23px;
+                }
+                p {
+                    font-size: 19px;
+                }
+                pre {
+                    
+                    code {
 
+                    }
+                }
+            }
+        }
+    }
 }
 //End
 

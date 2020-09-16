@@ -17,9 +17,10 @@ const Post = () => {
                 return (
                     <div className="background w-display m-top-35">
                         <div className="segment w-content">
-                            <article className="post w-display">
+                            <article className="post">
                                 <section className="post__header">
-                                    <h1 className="post__header__title">{post.title}</h1>
+                                    {/* <h1 className="post__header__title">{post.title}</h1> */}
+                                    <h1 className="post__header__title">Nếu đã từng sử dụng React context cho dự án của bạn, và gặp phải tình trạng các component con</h1>
                                     <div className="post__header__banner">
                                         <img className="picture--latest border-item" src={bannerUrl}></img>
                                     </div>
