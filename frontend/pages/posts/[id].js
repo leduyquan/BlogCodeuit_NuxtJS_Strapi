@@ -7,9 +7,11 @@ import '../../resources/assets/css/style.scss';
 
 const Post = () => {
     const router = useRouter();
+    if (!router.query.id) return null;
     return (
-        <Render query={POST_QUERY} id={router.query.id}>
-            {({ data: { post } }) => {
+        <Render query={POST_QUERY} path={router.query.id}>
+            {({ data: { posts } }) => {
+                const post = posts[0];
                 const bannerUrl =
                     process.env.NODE_ENV !== 'development'
                         ? post.banner.url

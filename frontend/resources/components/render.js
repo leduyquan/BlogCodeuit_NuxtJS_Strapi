@@ -2,9 +2,9 @@ import React from 'react';
 import Spinner from './spinner';
 import { useQuery } from '@apollo/react-hooks';
 
-const Render = ({ children, query, id, name }) => {
+const Render = ({ children, query, path }) => {
     const { data, loading, error } = useQuery(query, {
-        variables: { id: id},
+        variables: { path: path },
     });
 
     if (loading) return <Spinner/>;

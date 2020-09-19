@@ -9,7 +9,7 @@ const CardLatest = ({ post }) => {
     return (
         <div className="card-latest">
             <div className="card-latest--top">
-                <Link href={{ pathname: 'children/post', query: { id: post.id } }} as={'/post/' + post.path}>
+                <Link href='posts/[id]' as={`/posts/${post.path}`} >
                     <a className="link-reset">
                         <img className="picture--latest border-item" src={bannerUrl} alt={post.banner.url} />
                     </a>
@@ -17,7 +17,7 @@ const CardLatest = ({ post }) => {
             </div>
             <div className="card-latest--body">
                 <h2 className="title">
-                    <Link href={{ pathname: 'children/post', query: { id: post.id } }} as={'/post/' + post.path}>
+                    <Link href='posts/[id]' as={`/posts/${post.path}`}>
                         <a>{post.title}</a>
                     </Link>
                 </h2>

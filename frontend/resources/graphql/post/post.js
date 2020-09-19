@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 const POST_QUERY = gql`
-    query Posts($id: ID!) {
-        post(id: $id) {
+    query Posts($path: String) {
+        posts(where: {path: $path}) {
             id
             path
             title

@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Moment from 'react-moment';
-
 import './styles.scss';
 
 const CardItem = ({ post }) => {
@@ -12,9 +11,7 @@ const CardItem = ({ post }) => {
     return (
         <li className="card-item flex">
             <div className="card-item--left">
-                <Link
-                    href={{ pathname: 'children/post', query: { id: post.id } }}
-                    as={'/post/' + post.path}>
+                <Link href='posts/[id]' as={`/posts/${post.path}`}>
                     <a className="link-reset">
                         <img
                             className="picture--latest border-item"
@@ -27,8 +24,7 @@ const CardItem = ({ post }) => {
             <div className="card-item--right p-left-20">
                 <h4 className="title">
                     <Link
-                        href={{ pathname: 'children/post', query: { id: post.id } }}
-                        as={'/post/' + post.path}>
+                        href='posts/[id]' as={`/posts/${post.path}`}>
                         <a className="link-reset">{post.title}</a>
                     </Link>
                 </h4>
