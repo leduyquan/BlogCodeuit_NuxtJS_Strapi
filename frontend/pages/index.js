@@ -15,19 +15,18 @@ const HomePage = () => {
     });
     return (
         <div className="w-display m-top-35">
-            <div className="segment w-content">
+            <div className="">
                 <Context.Provider value={[context, setContext]}>
-                    <div className="main">
-                        <Search position="top" />
+                        {/* <Search position="top" /> */}
                         <Render query={POSTS_QUERY}>
                             {({ data: { posts } }) => {
                                 return <Content posts={posts} />;
                             }}
                         </Render>
-                    </div>
-                    <div className="sidebar">
                         <Sidebar />
-                    </div>
+                    {/* <div className="sidebar">
+                       
+                    </div> */}
                 </Context.Provider>
             </div>
         </div>

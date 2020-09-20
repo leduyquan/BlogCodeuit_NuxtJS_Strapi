@@ -9,34 +9,41 @@ const CardItem = ({ post }) => {
             ? post.banner.url
             : process.env.API_URL + post.banner.url;
     return (
-        <li className="card-item flex">
-            <div className="card-item--left">
-                <Link href='posts/[id]' as={`/posts/${post.path}`}>
-                    <a className="link-reset">
-                        <img
-                            className="picture--latest border-item"
-                            src={bannerUrl}
-                            alt={post.banner.url}
-                        />
-                    </a>
-                </Link>
-            </div>
-            <div className="card-item--right p-left-20">
-                <h4 className="title">
-                    <Link
-                        href='posts/[id]' as={`/posts/${post.path}`}>
-                        <a className="link-reset">{post.title}</a>
-                    </Link>
-                </h4>
-                <div className="meta">
-                    <a className="category">Java</a>
-                    <span className="time">
-                        {' '} - <Moment format="L">{post.published_at}</Moment>
-                    </span>
+            <div className="col col-lg-4 col-md-6">
+                <div className="card-item">
+                    <div className="card-item--img">
+                        <Link href='posts/[id]' as={`/posts/${post.path}`}>
+                            <a className="link-reset">
+                                <img
+                                    className="picture"
+                                    src={bannerUrl}
+                                    alt={post.banner.url}
+                                />
+                            </a>
+                        </Link>
+                        <div className="card-item--category">
+                            <a className="text">Javascript</a>
+                        </div>
+                    </div>
+
+                    <div className="card-item--content">
+                        <h2 className="title">
+                            <Link
+                                href='posts/[id]' as={`/posts/${post.path}`}>
+                                <a className="link-reset">{post.title}</a>
+                            </Link>
+                        </h2>
+                        <div className="meta">
+                            
+                            <span className="time">
+                                {' '} - <Moment format="L">{post.published_at}</Moment>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <span className="description">{post.descriptions}</span>
             </div>
-        </li>
+
+
     );
 };
 

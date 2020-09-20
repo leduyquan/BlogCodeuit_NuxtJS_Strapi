@@ -3,11 +3,29 @@ import Render from '../../resources/components/render';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import POST_QUERY from '../../resources/graphql/post/post';
+import Link from 'next/link';
+
 import '../../resources/assets/css/style.scss';
 
 const Post = () => {
     const router = useRouter();
     if (!router.query.id) return null;
+
+    const RouterLink = (props) => {
+        console.log('prop', props)
+        return (
+            props.href.match(/^(https?:)?\/\//)
+            ? <a href={props.href}>{props.children}</a>
+            : <Link to={props.href}>{props.children}</Link>
+        );
+      }
+
+     const imageSrc = uri => {
+
+        console.log('fdsa', uri)
+        return process.env.API_URL + uri;
+    }
+
     return (
         <Render query={POST_QUERY} path={router.query.id}>
             {({ data: { posts } }) => {
@@ -42,7 +60,11 @@ const Post = () => {
                                         </div>
                                         <div className="separator"></div>
                                         <div className="typography">
-                                            <ReactMarkdown source={post.content} escapeHtml={false} />
+                                            <ReactMarkdown
+                                                source={post.content}
+                                                transformImageUri={imageSrc}
+                                                escapeHtml={false}
+                                            />
                                         </div>
                                     </div>
                                 </section>

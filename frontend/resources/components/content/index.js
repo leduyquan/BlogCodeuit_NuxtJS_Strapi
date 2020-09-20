@@ -7,7 +7,6 @@ import './styles.scss';
 
 const Content = ({ posts}) => {
     const [context, setContext] = useContext(Context);
-    const [postLatest, setPostLatest] = useState(null);
     const [postItems, setPostItems] = useState([]);
     const postSorted = posts.sort((left, right) => {
         return moment.utc(left.timeStamp).diff(moment.utc(right.timeStamp))
@@ -15,13 +14,11 @@ const Content = ({ posts}) => {
 
     useEffect(() => {
         if (context.isSearch) {
-            setPostLatest(null);
             setPostItems(context.posts);
             setContext({posts: postSorted, isSearch: false, needRender: false});
         } else {
             if (context.needRender) {
-                setPostLatest(postSorted[0]);
-                if (postSorted.length > 1) setPostItems(postSorted.slice(1));
+                setPostItems(postSorted);
                 setContext({posts: postSorted, isSearch: false, needRender: false});
             }
         }
@@ -29,10 +26,13 @@ const Content = ({ posts}) => {
 
     return (
         <React.Fragment>
-            {postLatest && <CardLatest post={postLatest}/> }
-            <ul>
-                { postItems.map(item => <CardItem key={item.id} post={item}/>) }
-            </ul>
+            <div className="row">
+
+            { postItems.map(item => <CardItem key={item.id} post={item}/>) }
+            </div>
+            {/* {postLatest && <CardLatest post={postLatest}/> }
+            <ul> */}
+            {/* </ul> */}
         </React.Fragment>
     )
 

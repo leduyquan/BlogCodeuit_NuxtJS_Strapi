@@ -1,4 +1,5 @@
 @import "./common";
+@import "./bootstrap";
 
 * {
     margin: 0;
@@ -8,7 +9,11 @@
 
 html {
     font-family: 'Muli',sans-serif;
-    word-spacing: 0.5px;
+    //word-spacing: 0.5px;
+}
+
+body {
+    background: #f3f3f3 none;
 }
 
 .t-color-main {
@@ -54,31 +59,16 @@ html {
     display: flex;
 }
 
-.main {
-    flex-basis: 636px;
-    flex-shrink: 0;
-}
-
 @media only screen and (max-width: 1068px) {
     .segment {
         display: inline;
     }
 }
 
-@media only screen and (max-width : 1068px){
-    .sidebar {
-        .widget-search {
-            display: none;
-        }
-    }
-}
+
 
 @media only screen and (min-width : 1068px){
-    .main {
-        .widget-search {
-            display: none;
-        }
-    }
+    
     .sidebar {
         flex-basis: 265px;
         flex-shrink: 0;
@@ -94,8 +84,10 @@ html {
     background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 600px 45%);
     //background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 600px,hsla(0,0%,100%,0) 80%,#ebf4fd);
 }
+
 .post {
     padding-top: 50px;
+    word-spacing: 0.5px;
 
     &__header {
         margin: 0 37px;
@@ -119,7 +111,7 @@ html {
             background-color: #fff;
             border-radius: 20px;
             padding: 21px 24px;
-            box-shadow: 0 1px 4px 0 rgba(117,141,166,.2142);
+            box-shadow: 0 1px 4px 0 rgba(117, 141, 166, 0.3142);
 
             .author {
                 display: flex;
@@ -173,7 +165,8 @@ html {
                 }
                 p {
                     font-size: 17px;
-                    color: #325a97;
+                    color: #282C36;
+                    margin-bottom: 25px;
                     code {
                         font-family: monospace;
                         padding: 3px 8px;
@@ -182,6 +175,17 @@ html {
                         border-radius: 3px;
                         background-color: rgba(27,31,35,.05);
                         font-size: 15px;
+                        color: #325a97;
+                    }
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                    a{
+                        color: #0366d6;
+                        text-decoration: none;
+                        font-size: 17px;
                     }
                 }
                 pre {
@@ -229,6 +233,9 @@ html {
 }
 
 @media only screen and (min-width : 992px) {
+    .background {
+        background: linear-gradient(180deg,#ebf4fd,hsla(0,0%,100%,0) 45%);
+    }
     .post__header__title {
         margin: 0 40px;
         font-size: 40px;
