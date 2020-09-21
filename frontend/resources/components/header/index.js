@@ -30,7 +30,7 @@ const Header = () => {
 
     return (
         <header id="myHeader" className="global-header">
-            <nav className="wrapper w-display">
+            <nav className="wrapper h-center">
                 <div className="flex flex-vertical-centered">
                     <Link href='/'>
                         <a className="global-header__logo" onClick={goHomePage}>

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import moment from 'moment';
-import CardLatest from './card-latest';
-import CardItem from './card-item';
+import Card from './card';
 import { Context } from '../../utils/context';
 import './styles.scss';
 
@@ -25,15 +24,9 @@ const Content = ({ posts}) => {
     }, [context.posts, context.needRender])
 
     return (
-        <React.Fragment>
-            <div className="row">
-
-            { postItems.map(item => <CardItem key={item.id} post={item}/>) }
-            </div>
-            {/* {postLatest && <CardLatest post={postLatest}/> }
-            <ul> */}
-            {/* </ul> */}
-        </React.Fragment>
+        <div className="posts row">
+            { postItems.map(item => <Card key={item.id} post={item}/>) }
+        </div>
     )
 
 }

@@ -1,12 +1,13 @@
 import React from 'react';
+import './styles.scss';
 
 const AboutMe = () => {
     return (
-        <aside id="text-20" className="widget-text">
-            <h1 className="widget-title">About me</h1>
-            <div className="widget-body">
+        <div className="intro">
+            <h1 className="intro__title">About me</h1>
+            <div className="intro__body">
                 <img className="border-item" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
-                {/* <div className="widget-content">
+                {/* <div className="intro__content">
                     <p>Hello, mình là Lê Duy Quân, hiện đang là FE Developer.</p>
                     <p>
                         Lúc mới bắt đầu ra trường, mình khá bối rối trong việc định
@@ -25,7 +26,7 @@ const AboutMe = () => {
                         <a href="https://toidicodedao.com/about/">Đọc thêm!</a>
                     </p>
                 </div> */}
-                <div className="widget-content">
+                <div className="intro__content">
                     <p>Kháng các đòn tâm linh: Giáo sư X đã đặt vào trong đầu anh lá chắn tâm linh, các đòn tâm linh rất khó ảnh hưởng được anh</p>
                     <p>
                         Kĩ năng chiến đấu: Level Max, phong cách của anh ko bao giờ chịu làm theo kế hoạch, thích thì cứ nhào dzô
@@ -36,11 +37,11 @@ const AboutMe = () => {
                     <p>ảo kiếm Muramasa: Thanh kiếm chứa dựng linh hồn của Muramasa, bị chém thì dường như anh ko thể lành được
                     </p>
                     <p>
-                        <a style={{color: "#476BA2"}} href="https://toidicodedao.com/about/">Đọc thêm!</a>
+                        <a style={{color: "#325a97"}} href="https://toidicodedao.com/about/">Đọc thêm!</a>
                     </p>
                 </div>
             </div>
-        </aside>
+        </div>
     );
 };
 

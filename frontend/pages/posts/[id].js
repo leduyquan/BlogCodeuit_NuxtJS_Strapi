@@ -35,63 +35,38 @@ const Post = () => {
                         ? post.banner.url
                         : process.env.API_URL + post.banner.url;
                 return (
-                    <div className="background w-display m-top-35">
-                        <div className="segment w-content">
-                            <article className="post">
-                                <section className="post__header">
-                                    {/* <h1 className="post__header__title">{post.title}</h1> */}
-                                    <h1 className="post__header__title">Nếu đã từng sử dụng React context cho dự án của bạn, và gặp phải tình trạng các component con</h1>
-                                    <div className="post__header__banner">
-                                        <img className="picture--latest border-item" src={bannerUrl}></img>
+                    <div className="wrapper m-top-35">
+                        <div className="post">
+                            <aside className="post__interact">
+                            </aside>
+                            <article className="post__content">
+                                <img className="banner" src={bannerUrl}></img>
+                                <div className="article">
+                                    <div className="category">
+                                        <a className="text">Javascript</a>
                                     </div>
-                                </section>
-                                <section className="post__content">
-                                    <div className="content-display">
-                                        <div className="author">
-                                            <div className="avatar"><img className="col-100p" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" /></div>
-                                            <div className="name-date">
-                                                <p className="name fw-bold">Quân Duy</p>
-                                                <p className="datetime">
-                                                    <Moment format="L">
-                                                        {post.published_at}
-                                                    </Moment>
-                                                </p>
-                                            </div>
+                                    <h1 className="title">Nếu đã từng sử dụng React context cho dự án của bạn, và gặp phải tình trạng các component con</h1>
+                                    <section className="author">
+                                        <div className="avatar">
+                                            <img className="col-100p" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
                                         </div>
-                                        <div className="separator"></div>
-                                        <div className="typography">
-                                            <ReactMarkdown
-                                                source={post.content}
-                                                transformImageUri={imageSrc}
-                                                escapeHtml={false}
-                                            />
-                                        </div>
-                                    </div>
-                                </section>
+                                        <span className="name">Quân Duy</span>
+                                        <span className="daytime">
+                                            <i className="fa fa-calendar"></i><Moment format="DD/MM/YYYY">{post.published_at}</Moment>
+                                        </span>
+                                    </section>
+                                    <div className="separator"></div>
+                                    <section className="typography">
+                                        <ReactMarkdown
+                                            source={post.content}
+                                            transformImageUri={imageSrc}
+                                            escapeHtml={false}
+                                        />
+                                    </section>
+                                </div>
                             </article>
                         </div>
                     </div>
-                    // <div>
-                    //     <div
-                    //         id="banner"
-                    //         className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-                    //         data-src={bannerUrl}
-                    //         data-srcset={bannerUrl}
-                    //         data-uk-img>
-                    //         <h1>{post.title}</h1>
-                    //     </div>
-
-                    //     <div className="uk-section">
-                    //         <div className="uk-container uk-container-small">
-                    //             <ReactMarkdown source={post.content} escapeHtml={false} />
-                    //             <p>
-                    //                 <Moment format="MMM Do YYYY">
-                    //                     {post.published_at}
-                    //                 </Moment>
-                    //             </p>
-                    //         </div>
-                    //     </div>
-                    // </div>
                 );
             }}
         </Render>

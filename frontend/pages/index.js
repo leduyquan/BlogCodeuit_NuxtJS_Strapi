@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Content from '../resources/components/content';
-import Sidebar from '../resources/components/sidebar';
+import AboutMe from '../resources/components/about-me';
 import Render from '../resources/components/render';
 import POSTS_QUERY from '../resources/graphql/post/posts';
-import Search from '../resources/components/sidebar/search';
+import Search from '../resources/components/search';
 import { Context } from '../resources/utils/context';
 import '../resources/assets/css/style.scss';
 
@@ -14,21 +14,18 @@ const HomePage = () => {
         needRender: true,
     });
     return (
-        <div className="w-display m-top-35">
-            <div className="">
-                <Context.Provider value={[context, setContext]}>
-                        {/* <Search position="top" /> */}
-                        <Render query={POSTS_QUERY}>
-                            {({ data: { posts } }) => {
-                                return <Content posts={posts} />;
-                            }}
-                        </Render>
-                        <Sidebar />
-                    {/* <div className="sidebar">
-                       
-                    </div> */}
-                </Context.Provider>
-            </div>
+        <div className="wrapper m-top-35">
+            <Context.Provider value={[context, setContext]}>
+                {/* <div className="flex justify-flex-end">
+                    <Search />
+                </div> */}
+                <Render query={POSTS_QUERY}>
+                    {({ data: { posts } }) => {
+                        return <Content posts={posts} />;
+                    }}
+                </Render>
+            </Context.Provider>
+            <AboutMe />
         </div>
     );
 };
