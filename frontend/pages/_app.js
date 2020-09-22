@@ -10,7 +10,7 @@ const App = ({ Component, pageProps, apollo }) => {
     return (
         <ApolloProvider client={apollo}>
             <Head>
-                <title>Code Khá Vui</title>
+                <title>Codeuit</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="icon" href={favicon} />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
