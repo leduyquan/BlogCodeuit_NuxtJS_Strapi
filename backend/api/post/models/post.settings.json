@@ -37,12 +37,9 @@
       "type": "date",
       "required": true
     },
-    "category": {
-      "model": "category",
-      "via": "posts"
-    },
-    "descriptions": {
-      "type": "text"
+    "categories": {
+      "collection": "category",
+      "via": "post"
     }
   }
 }

@@ -15,9 +15,6 @@ const Card = ({ post }) => {
                     <Link href='posts/[id]' as={`/posts/${post.path}`}>
                         <a><img className="picture" src={bannerUrl} alt={post.banner.url} /> </a>
                     </Link>
-                    <div className="card__category">
-                        <a className="text">Javascript</a>
-                    </div>
                 </div>
                 <div className="card__content">
                     <h2 className="title">
@@ -33,6 +30,9 @@ const Card = ({ post }) => {
                         <span className="daytime">
                             <i className="fa fa-calendar"></i><Moment format="DD/MM/YYYY">{post.published_at}</Moment>
                         </span>
+                    </section>
+                    <section className="card__category">
+                        {post.categories.map(x => <a className="text">{x.name}</a>)}
                     </section>
                 </div>
             </div>

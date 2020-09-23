@@ -10,7 +10,7 @@ const POST_QUERY = gql`
             banner {
                 url
             }
-            category {
+            categories {
                 id
                 name
             }

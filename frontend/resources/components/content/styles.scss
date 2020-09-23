@@ -20,7 +20,7 @@
     }
 
     &__content {
-        margin: 25px 0 0;
+        margin: 22px 0 0;
         .title {
             a {
                 font-family: 'Roboto',Arial,sans-serif;
@@ -41,24 +41,40 @@
     }
 
     &__category {
-        position: absolute;
-        top: 25px;
-        left: 30px;
-
+        margin-top: 10px;
         .text {
-            display: inline-block;
-            height: auto;
-            line-height: 10px;
-            padding: 7px 10px;
-            -webkit-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
-            font-size: 10px;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            text-transform: uppercase;
+            background-color: #818181;
+            border-radius: 0 2px 2px 0;
             color: #fff;
-            background: #009cff none;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.2727272727;
+            margin: 0px 4px 0px 10px;
+            padding: 3px 7px;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .text::after {
+            background-color: #fff;
+            border-radius: 50%;
+            content: "";
+            height: 4px;
+            position: absolute;
+            top: 7px;
+            left: -2px;
+            width: 4px;
+        }
+        .text::before {
+            border-top: 9px solid transparent;
+            border-right: 8px solid #818181;
+            border-bottom: 9px solid transparent;
+            content: "";
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: -8px;
+            width: 0;
         }
     }
 }

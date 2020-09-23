@@ -14,14 +14,14 @@
       "required": true,
       "unique": true
     },
-    "posts": {
-      "via": "category",
-      "collection": "post"
-    },
     "path": {
       "type": "uid",
       "required": true,
       "targetField": "name"
+    },
+    "post": {
+      "via": "categories",
+      "model": "post"
     }
   }
 }
