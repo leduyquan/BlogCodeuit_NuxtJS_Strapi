@@ -213,12 +213,13 @@ body {
                     }
                 }
                 ul {
+                    list-style-position: outside;
                     margin-bottom: 25px;
                     margin-left: 35px;
-                    list-style-position: outside;
                     li {
                         font-size: 15px;
                         margin-bottom: 10px;
+                        padding-left: 5px;
                     }
                 }
             }
