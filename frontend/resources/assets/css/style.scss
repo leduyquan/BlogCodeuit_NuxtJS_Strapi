@@ -70,7 +70,8 @@ body {
             width: 100%;
             height: auto
         }
-        .article {
+
+        .frame {
             background-color: #fff;
             padding: 21px 24px;
             box-shadow: 0 1px 4px 0 rgba(117, 141, 166, 0.3142);
@@ -180,6 +181,9 @@ body {
                         text-decoration: none;
                         font-size: 17px;
                     }
+                    a:hover {
+                        text-decoration: underline;
+                    }
                 }
                 pre {
                     color: #ccc;
@@ -235,7 +239,7 @@ body {
 
 @media only screen and (min-width : 768px) {
     .post__content {
-        .article {
+        .frame {
             padding: 40px 52px;
             .title {
                 font-size: 24px;

@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { FacebookProvider, Like , Comments, CommentsCount } from 'react-facebook';
 import Render from '../../resources/components/render';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
@@ -11,18 +12,7 @@ const Post = () => {
     const router = useRouter();
     if (!router.query.id) return null;
 
-    const RouterLink = (props) => {
-        console.log('prop', props)
-        return (
-            props.href.match(/^(https?:)?\/\//)
-            ? <a href={props.href}>{props.children}</a>
-            : <Link to={props.href}>{props.children}</Link>
-        );
-      }
-
      const imageSrc = uri => {
-
-        console.log('fdsa', uri)
         return process.env.API_URL + uri;
     }
 
@@ -41,11 +31,11 @@ const Post = () => {
                             </aside>
                             <article className="post__content">
                                 <img className="banner" src={bannerUrl}></img>
-                                <div className="article">
+                                <div className="frame">
                                     <div className="category">
                                         <a className="text">Javascript</a>
                                     </div>
-                                    <h1 className="title">Nếu đã từng sử dụng React context cho dự án của bạn, và gặp phải tình trạng các component con</h1>
+                                    <h1 className="title">{post.title}</h1>
                                     <section className="author">
                                         <div className="avatar">
                                             <img className="col-100p" src="https://res.cloudinary.com/restaff/image/upload/v1599368841/avatar/avatar_xas6er.jpg" />
@@ -63,6 +53,13 @@ const Post = () => {
                                             escapeHtml={false}
                                         />
                                     </section>
+                                </div>
+                                <div className="frame m-top-30">
+                                    <FacebookProvider appId="1002148063583402">
+                                        <Like href={router.pathname} colorScheme="dark" showFaces share />
+                                        <CommentsCount href={router.pathname} />
+                                        <Comments href={router.pathname} />
+                                    </FacebookProvider>
                                 </div>
                             </article>
                         </div>

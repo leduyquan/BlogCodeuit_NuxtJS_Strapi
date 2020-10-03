@@ -27,6 +27,7 @@
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-facebook": "^8.1.4",
     "react-markdown": "^4.3.1",
     "react-moment": "^0.9.7",
     "react-smackdown": "^0.8.8",
