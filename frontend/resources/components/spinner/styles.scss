@@ -1,164 +1,81 @@
-.loader,
-.loader:after {
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
+/*
+// 29. Page Loader
+// --------------------------------------------------
+*/
+.page-loader {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #f3f3f3;
+    z-index: 100000;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .loader {
-    margin: 150px auto;
-    font-size: 8px;
-    position: relative;
+    font-size: 10px;
+    position: absolute;
     text-indent: -9999em;
-    border-top: 1.1em solid #476BA2;
-    border-right: 1.1em solid #476BA2;
-    border-bottom: 1.1em solid #476BA2;
-    border-left: 1.1em solid #f3f3f3;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: load8 1.1s infinite linear;
-    animation: load8 1.1s infinite linear;
-}
-@-webkit-keyframes load8 {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes load8 {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-$square: 32px;
-$duration: 10s;
-.loading {
-    margin: 150px auto;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -30px;
+    border-radius: 50%;
+    background: #476ba2;
+    background: -moz-linear-gradient(left, #476ba2 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, #476ba2 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, #476ba2 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, #476ba2 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, #476ba2 10%, rgba(255, 255, 255, 0) 42%);
     position: relative;
-    width: $square * 3;
-    height: $square * 3;
-    transform: rotate(45deg);
-    animation: hue-rotate $duration linear infinite both;
+    -webkit-animation: load3 1.4s infinite linear;
+    -o-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
 }
-
-.loading__square {
+.loader:before {
+    width: 50%;
+    height: 50%;
+    background: #476ba2;
+    border-radius: 100% 0 0 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: $square - 4px;
-    height: $square - 4px;
-    margin: 2px;
-    border-radius: 2px;
-    background: #325a97;
-    background-image: linear-gradient(45deg, #E5801B 40%, #325a97 60%);
-    background-image: -moz-linear-gradient(#E5801B, #E5801B);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    animation: square-animation $duration ease-in-out infinite both;
-
-    @for $i from 0 through 7 {
-        &:nth-of-type(#{$i}) {
-            animation-delay: -($duration / 7) * $i;
-        }
-    }
+    content: '';
 }
-
-@keyframes square-animation {
+.loader:after {
+    background: #f3f3f3;
+    width: 88%;
+    height: 88%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+@-webkit-keyframes load3 {
     0% {
-        left: 0;
-        top: 0;
-    }
-
-    10.5% {
-        left: 0;
-        top: 0;
-    }
-    12.5% {
-        left: $square;
-        top: 0;
-    }
-
-    23% {
-        left: $square;
-        top: 0;
-    }
-    25% {
-        left: $square * 2;
-        top: 0;
-    }
-
-    35.5% {
-        left: $square * 2;
-        top: 0;
-    }
-    37.5% {
-        left: $square * 2;
-        top: $square;
-    }
-
-    48% {
-        left: $square * 2;
-        top: $square;
-    }
-    50% {
-        left: $square;
-        top: $square;
-    }
-
-    60.5% {
-        left: $square;
-        top: $square;
-    }
-    62.5% {
-        left: $square;
-        top: $square * 2;
-    }
-
-    73% {
-        left: $square;
-        top: $square * 2;
-    }
-    75% {
-        left: 0;
-        top: $square * 2;
-    }
-
-    85.5% {
-        left: 0;
-        top: $square * 2;
-    }
-    87.5% {
-        left: 0;
-        top: $square;
-    }
-
-    98% {
-        left: 0;
-        top: $square;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        left: 0;
-        top: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
-
-// This is just a cute animation that cycles through the different hues.
-@keyframes hue-rotate {
+@keyframes load3 {
     0% {
-        filter: hue-rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        filter: hue-rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }

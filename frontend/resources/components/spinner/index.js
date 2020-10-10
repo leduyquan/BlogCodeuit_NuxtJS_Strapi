@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles.scss';
 
 const Spinner = () => {
     return (
-        // <div className="loading">
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        //     <div className="loading__square"></div>
-        // </div>
-        <div className="loader">Loading...</div>
+        <div class="page-loader">
+            <div class="loader">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
     );
 };
 
