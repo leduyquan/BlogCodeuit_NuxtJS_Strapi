@@ -3,10 +3,10 @@ import './styles.scss';
 
 const Spinner = () => {
     return (
-        <div class="page-loader">
-            <div class="loader">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
+        <div className="page-loader">
+            <div className="loader">
+                <div className="dot1"></div>
+                <div className="dot2"></div>
             </div>
         </div>
     );
