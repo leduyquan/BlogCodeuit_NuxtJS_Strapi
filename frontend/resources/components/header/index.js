@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import logo from '../../assets/images/logo.svg';
@@ -7,10 +7,14 @@ import { FacebookProvider, Like , Share } from 'react-facebook';
 import './styles.scss';
 
 const Header = () => {
+    const [href, setHref] = useState('https://codeuit.com');
     const router = useRouter();
-    console.log('router',router)
     useEffect(() => {
         window.onscroll = () => sticky();
+
+        if (typeof window !== 'undefined') {
+            setHref(window.document.URL);
+        }
     }, []);
 
     const sticky = () => {
@@ -40,7 +44,7 @@ const Header = () => {
                     {router.pathname !=='/' && <div className="global-header__social">
                         <FacebookProvider appId="1002148063583402">
                             <span >
-                                <Like href={router.pathname} colorScheme="light" showFaces layout="button_count" size="large" share />
+                                <Like href={href} colorScheme="light" showFaces layout="button_count" size="large" share />
                             </span>
                         </FacebookProvider>
                     </div>}

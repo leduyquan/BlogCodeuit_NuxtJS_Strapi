@@ -1,20 +1,15 @@
+import React from 'react';
 import { useRouter } from 'next/router';
-import { FacebookProvider, Like , Comments, CommentsCount } from 'react-facebook';
+import { FacebookProvider, Like } from 'react-facebook';
 import Render from '../../resources/components/render';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import POST_QUERY from '../../resources/graphql/post/post';
-import Link from 'next/link';
-
 import '../../resources/assets/css/style.scss';
 
 const Post = () => {
     const router = useRouter();
     if (!router.query.id) return null;
-
-     const imageSrc = uri => {
-        return process.env.API_URL + uri;
-    }
 
     return (
         <Render query={POST_QUERY} path={router.query.id}>
@@ -30,7 +25,7 @@ const Post = () => {
                             <aside className="post__interact">
                             </aside>
                             <article className="post__content">
-                                <img className="banner" src={bannerUrl}></img>
+                                <img className="banner border-top" src={bannerUrl}></img>
                                 <div className="frame">
                                     <div className="category">
                                         <a className="text">Javascript</a>
@@ -49,17 +44,15 @@ const Post = () => {
                                     <section className="typography">
                                         <ReactMarkdown
                                             source={post.content}
-                                            transformImageUri={imageSrc}
                                             escapeHtml={false}
                                         />
                                     </section>
                                 </div>
-                                <div className="frame m-top-30">
+                                <div id="fb-root" className="frame border-top m-top-30">
                                     <FacebookProvider appId="1002148063583402">
-                                        <Like href={router.pathname} colorScheme="dark" showFaces share />
-                                        <CommentsCount href={router.pathname} />
-                                        <Comments href={router.pathname} />
+                                        <Like className="m-bot-100" href={window.document.URL} colorScheme="dark" size="large" share />
                                     </FacebookProvider>
+                                    <div className="fb-comments" data-href={window.document.URL} loading="lazy" data-numposts="5" data-width="100%"></div>
                                 </div>
                             </article>
                         </div>

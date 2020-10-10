@@ -13,7 +13,7 @@ const Card = ({ post }) => {
             <div className="card">
                 <div className="card__img">
                     <Link href='posts/[id]' as={`/posts/${post.path}`}>
-                        <a><img className="picture" src={bannerUrl} alt={post.banner.url} /> </a>
+                        <a><img className="picture border-top" src={bannerUrl} alt={post.banner.url} /> </a>
                     </Link>
                 </div>
                 <div className="card__content">
@@ -32,7 +32,7 @@ const Card = ({ post }) => {
                         </span>
                     </section>
                     <section className="card__category">
-                        {post.categories.map(x => <a className="text">{x.name}</a>)}
+                        {post.categories.map(x => <a className="text" key={x.id}>{x.name}</a>)}
                     </section>
                 </div>
             </div>
