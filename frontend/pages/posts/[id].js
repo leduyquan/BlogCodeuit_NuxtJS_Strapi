@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useRouter } from 'next/router';
-import { FacebookProvider, Like } from 'react-facebook';
+import { FacebookProvider, Like, Comments } from 'react-facebook';
 import Render from '../../resources/components/render';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
@@ -10,6 +10,10 @@ import '../../resources/assets/css/style.scss';
 const Post = () => {
     const router = useRouter();
     if (!router.query.id) return null;
+    // useEffect(() => {
+    //     window.FB && window.FB.XFBML.parse();
+    
+    // });
 
     return (
         <Render query={POST_QUERY} path={router.query.id}>
@@ -48,11 +52,11 @@ const Post = () => {
                                         />
                                     </section>
                                 </div>
-                                <div id="fb-root" className="frame border-top m-top-30">
+                                <div className="frame border-top m-top-30">
                                     <FacebookProvider appId="1002148063583402">
                                         <Like className="m-bot-100" href={window.document.URL} colorScheme="dark" size="large" share />
+                                        <Comments href={window.document.URL} numPosts="5" width="100%"/>
                                     </FacebookProvider>
-                                    <div className="fb-comments" data-href={window.document.URL} loading="lazy" data-numposts="5" data-width="100%"></div>
                                 </div>
                             </article>
                         </div>

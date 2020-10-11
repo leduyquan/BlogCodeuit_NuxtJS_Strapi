@@ -9,13 +9,18 @@ import './styles.scss';
 const Header = () => {
     const [href, setHref] = useState('https://codeuit.com');
     const router = useRouter();
+    const firstRender = useRef(true);
     useEffect(() => {
         window.onscroll = () => sticky();
+    }, []);
 
+    useEffect(() => {
         if (typeof window !== 'undefined') {
             setHref(window.document.URL);
         }
-    }, []);
+        //window.FB && window.FB.XFBML.parse();
+    
+    });
 
     const sticky = () => {
         var header = document.getElementById('myHeader');
