@@ -8,12 +8,14 @@ import POST_QUERY from '../../resources/graphql/post/post';
 import '../../resources/assets/css/style.scss';
 
 const Post = () => {
+    useEffect(() => {
+        setTimeout(() => {
+            window.FB && window.FB.XFBML.parse();
+        }, 700);
+    });
+
     const router = useRouter();
     if (!router.query.id) return null;
-    // useEffect(() => {
-    //     window.FB && window.FB.XFBML.parse();
-    
-    // });
 
     return (
         <Render query={POST_QUERY} path={router.query.id}>

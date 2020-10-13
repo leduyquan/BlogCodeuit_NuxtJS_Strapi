@@ -1,15 +1,13 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import logo from '../../assets/images/logo.svg';
-import socialIcon from '../../assets/images/social.svg';
-import { FacebookProvider, Like , Share } from 'react-facebook';
+import { FacebookProvider, Like } from 'react-facebook';
 import './styles.scss';
 
 const Header = () => {
     const [href, setHref] = useState('https://codeuit.com');
     const router = useRouter();
-    const firstRender = useRef(true);
     useEffect(() => {
         window.onscroll = () => sticky();
     }, []);
@@ -18,8 +16,6 @@ const Header = () => {
         if (typeof window !== 'undefined') {
             setHref(window.document.URL);
         }
-        //window.FB && window.FB.XFBML.parse();
-    
     });
 
     const sticky = () => {
