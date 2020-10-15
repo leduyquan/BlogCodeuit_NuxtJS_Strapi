@@ -4,16 +4,12 @@ import Moment from 'react-moment';
 import './styles.scss';
 
 const Card = ({ post }) => {
-    const bannerUrl =
-        process.env.NODE_ENV !== 'development'
-            ? post.banner.url
-            : process.env.API_URL + post.banner.url;
     return (
         <div className="col col-lg-4 col-md-6">
             <div className="card">
                 <div className="card__img">
                     <Link href='posts/[id]' as={`/posts/${post.path}`}>
-                        <a><img className="picture border-top" src={bannerUrl} alt={post.banner.url} /> </a>
+                        <a><img className="picture border-top" src={post.banner} alt={post.banner} /> </a>
                     </Link>
                 </div>
                 <div className="card__content">

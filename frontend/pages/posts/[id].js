@@ -21,17 +21,13 @@ const Post = () => {
         <Render query={POST_QUERY} path={router.query.id}>
             {({ data: { posts } }) => {
                 const post = posts[0];
-                const bannerUrl =
-                    process.env.NODE_ENV !== 'development'
-                        ? post.banner.url
-                        : process.env.API_URL + post.banner.url;
                 return (
                     <div className="wrapper m-top-35">
                         <div className="post">
                             <aside className="post__interact">
                             </aside>
                             <article className="post__content">
-                                <img className="banner border-top" src={bannerUrl}></img>
+                                <img className="banner border-top" src={post.banner}></img>
                                 <div className="frame">
                                     <div className="category">
                                         <a className="text">Javascript</a>

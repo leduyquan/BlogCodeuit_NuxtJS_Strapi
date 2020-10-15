@@ -7,9 +7,7 @@ const POST_QUERY = gql`
             path
             title
             content
-            banner {
-                url
-            }
+            banner
             categories {
                 id
                 name

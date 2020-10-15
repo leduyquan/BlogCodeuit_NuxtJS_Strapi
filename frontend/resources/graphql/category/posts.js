@@ -9,9 +9,7 @@ const CATEGORY_POSTS_QUERY = gql`
                 path
                 title
                 content
-                banner {
-                    url
-                }
+                banner
                 category {
                     id
                     name

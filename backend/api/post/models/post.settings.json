@@ -22,17 +22,6 @@
       "type": "richtext",
       "required": true
     },
-    "banner": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "files",
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
-    },
     "published_at": {
       "type": "date",
       "required": true
@@ -40,6 +29,10 @@
     "categories": {
       "collection": "category",
       "via": "post"
+    },
+    "banner": {
+      "type": "string",
+      "required": true
     }
   }
 }

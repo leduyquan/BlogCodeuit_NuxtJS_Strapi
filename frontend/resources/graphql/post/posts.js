@@ -6,12 +6,10 @@ const POSTS_QUERY = gql`
             id
             path
             title
+            banner
             categories {
                 id
                 name
-            }
-            banner {
-                url
             }
         }
     }
